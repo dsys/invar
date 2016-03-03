@@ -1,0 +1,9 @@
+language: node_js
+
+node_js:
+  - "4.2"
+  - "5.0"
+  - "5.7"
+
+script:
+  - make lint test
