@@ -38,11 +38,11 @@ export default makeInvarFnObj({
     throwError(message, opts)
   },
 
-  equal (expected, actual, message, opts = {}) {
-    if (!_.isEqual(expected, actual)) {
+  equal (actual, expected, message, opts = {}) {
+    if (!_.isEqual(actual, expected)) {
       throwError(
-        `${message}\n  Expected: ${stringify(expected)}\n  Actual:   ${stringify(actual)}`,
-        _.defaults({ expected, actual }, opts))
+        `${message}\n  Actual: ${stringify(actual)}\n  Expected:   ${stringify(expected)}`,
+        _.defaults({ actual, expected }, opts))
     }
   }
 })
