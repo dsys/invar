@@ -1,8 +1,8 @@
-# invar
+<p align="center"><img src="https://raw.githubusercontent.com/pavlovml/invar/master/resources/logo.png" alt="logo" width="220" /></p>
 
 [![TravisCI shield](https://img.shields.io/travis/pavlovml/invar.svg)](https://travis-ci.org/pavlovml/invar) [![npm shield](https://img.shields.io/npm/v/invar.svg)](https://www.npmjs.com/package/invar) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
-Expressive runtime invariants for JavaScript. **The reign of bad errors is over!** 
+Expressive runtime invariants for JavaScript. *The reign of poor error messages is over!*
 
 ## Installation
 
