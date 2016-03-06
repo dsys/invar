@@ -42,7 +42,7 @@ describe('invariant.equal', () => {
       expect(false).toBeTruthy()
     } catch (ex) {
       expect(ex.name).toBe('Invariant Violation')
-      expect(ex.message).toBe('Lorem ipsum.\n  Actual: "foo"\n  Expected:   "bar"')
+      expect(ex.message).toBe('Lorem ipsum.\n    Actual: "foo"\n  Expected: "bar"')
       expect(ex.actual).toBe('foo')
       expect(ex.expected).toBe('bar')
     }

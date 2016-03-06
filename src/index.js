@@ -41,7 +41,15 @@ export default makeInvarFnObj({
   equal (actual, expected, message, opts = {}) {
     if (!_.isEqual(actual, expected)) {
       throwError(
-        `${message}\n  Actual: ${stringify(actual)}\n  Expected:   ${stringify(expected)}`,
+        `${message}\n    Actual: ${stringify(actual)}\n  Expected: ${stringify(expected)}`,
+        _.defaults({ actual, expected }, opts))
+    }
+  },
+
+  notEqual (actual, expected, message, opts = {}) {
+    if (_.isEqual(actual, expected)) {
+      throwError(
+        `${message}\n    Actual: ${stringify(actual)}\n  Expected: ${stringify(expected)}`,
         _.defaults({ actual, expected }, opts))
     }
   }
