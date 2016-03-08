@@ -1,6 +1,6 @@
 {
   "name": "invar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Expressive runtime invariants for JavaScript",
   "license": "BSD-3-Clause",
   "main": "dist/index.js",
