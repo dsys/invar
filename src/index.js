@@ -38,10 +38,18 @@ export default makeInvarFnObj({
     throwError(message, opts)
   },
 
+  req (arg) {
+    if (arg == null) {
+      throwError(`Required argument not provided.`)
+    } else {
+      throwError(`Required argument '${arg}' not provided.`)
+    }
+  },
+
   equal (actual, expected, message, opts = {}) {
     if (!_.isEqual(actual, expected)) {
       throwError(
-        `${message}\n    Actual: ${stringify(actual)}\n  Expected: ${stringify(expected)}`,
+        `${message}\n    actual: ${stringify(actual)}\n  expected: ${stringify(expected)}`,
         _.defaults({ actual, expected }, opts))
     }
   },
@@ -49,7 +57,7 @@ export default makeInvarFnObj({
   notEqual (actual, expected, message, opts = {}) {
     if (_.isEqual(actual, expected)) {
       throwError(
-        `${message}\n    Actual: ${stringify(actual)}\n  Expected: ${stringify(expected)}`,
+        `${message}\n    actual: ${stringify(actual)}\n  expected: not ${stringify(expected)}`,
         _.defaults({ actual, expected }, opts))
     }
   }

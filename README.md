@@ -41,7 +41,7 @@ invar.equal(2 + 2, 5, "Daisy, Daisy, give me your answer do.")
 #### Throws
 
     Invariant Violation: Daisy, Daisy, give me your answer do.
-      Actual: 4
+        Actual: 4
       Expected: 5
 
 ### `invar.fail(message)`
