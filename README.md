@@ -14,6 +14,8 @@
 import invar from 'invar'
 ```
 
+---
+
 ### `invar(message)`
 
 Check for truthiness.
@@ -28,6 +30,8 @@ invar(2 + 2 === 5, "I'm sorry Dave, I'm afraid I can't do that.")
 
     Invariant Violation: I'm sorry Dave, I'm afraid I can't do that.
 
+---
+
 ### `invar.equal(actual, expected, message)`
 
 Check for shallow equality.
@@ -41,8 +45,45 @@ invar.equal(2 + 2, 5, "Daisy, Daisy, give me your answer do.")
 #### Throws
 
     Invariant Violation: Daisy, Daisy, give me your answer do.
-        Actual: 4
-      Expected: 5
+        actual: 4
+      expected: 5
+
+---
+
+### `invar.notEqual(actual, expected, message)`
+
+Check for shallow unequality.
+
+#### Example
+
+```javascript
+invar.notEqual(2 + 2, 4, "I've just picked up a fault in the AE35 unit.")
+```
+
+#### Throws
+
+    Invariant Violation: I've just picked up a fault in the AE35 unit.
+        actual: 4
+      expected: not 4
+
+---
+
+### `invar.req(arg)`
+
+Always fail. Used for mandatory function arguments.
+
+#### Example
+
+```javascript
+function myFunction (mandatoryArg = invar.req('mandatoryArg')) {}
+myFunction()
+```
+
+#### Throws
+
+    Invariant Violation: Required argument 'mandatoryArg' not provided.
+
+---
 
 ### `invar.fail(message)`
 
