@@ -33,8 +33,8 @@ describe('invar.fail', () => {
 
 describe('invar.req', () => {
   it('throws a generic error when no argument name is provided', () => {
+    function fn (daisy = invar.req()) {}
     try {
-      function fn (daisy = invar.req()) {}
       fn()
       expect(false).toBeTruthy()
     } catch (ex) {
@@ -44,8 +44,8 @@ describe('invar.req', () => {
   })
 
   it('throws a specific error when an argument name is provided', () => {
+    function fn (daisy = invar.req('daisy')) {}
     try {
-      function fn (daisy = invar.req('daisy')) {}
       fn()
       expect(false).toBeTruthy()
     } catch (ex) {
