@@ -19,8 +19,8 @@
     "npm": ">= 3.3.0"
   },
   "dependencies": {
-    "json-stable-stringify": "^1.0.1",
-    "lodash": "^3.10.1"
+    "json-stable-stringify": ">=1.0.1",
+    "lodash": ">=3.10.1"
   },
   "devDependencies": {
     "babel-cli": "^6.2.0",
